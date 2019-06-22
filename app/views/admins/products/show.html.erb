@@ -1,0 +1,10 @@
+<h1> 商品詳細画面（管理者側）</h1>
+
+<%= @product.cd_title %>
+
+<%= link_to "商品の編集", edit_admins_product_path(@product) %>
+
+<%= link_to "商品の削除", admins_product_path(@product),
+		method: :delete, "data-confirm" => "本当に削除しますか？" %>
+
+<%= link_to "商品一覧へ", admins_products_path %>

@@ -1,8 +1,14 @@
+<h1> 商品一覧画面（管理者側）</h1>
+
 <% @products.each do |product| %>
 
 <%= product.cd_title %>
 
+<%= link_to "商品の詳細" , admins_product_path(product) %><br>
+
 <% end %>
+
+<%= link_to "商品の追加" , new_admins_product_path %><br>
 
 
  <%= link_to('Logout', destroy_admin_session_path, :method => :delete) %>

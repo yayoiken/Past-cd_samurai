@@ -1,0 +1,2 @@
+class ProductDisc < ApplicationRecord
+end

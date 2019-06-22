@@ -68,6 +68,26 @@ ActiveRecord::Schema.define(version: 2019_06_22_035527) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "order_products", force: :cascade do |t|
+    t.integer "genre_id"
+    t.integer "order_id"
+    t.string "artist_name"
+    t.string "cd_title"
+    t.string "label_name"
+    t.string "product_image_id"
+    t.integer "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer "client_id"
+    t.integer "payment_method"
+    t.integer "ship_status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "product_disc_songs", force: :cascade do |t|
     t.integer "disc_id"
     t.string "song_name"
@@ -86,9 +106,6 @@ ActiveRecord::Schema.define(version: 2019_06_22_035527) do
   create_table "products", force: :cascade do |t|
     t.integer "genre_id"
     t.integer "admin_id"
-  create_table "order_products", force: :cascade do |t|
-    t.integer "genre_id"
-    t.integer "order_id"
     t.string "artist_name"
     t.string "cd_title"
     t.string "label_name"
@@ -96,14 +113,6 @@ ActiveRecord::Schema.define(version: 2019_06_22_035527) do
     t.integer "price"
     t.integer "stock"
     t.boolean "buy_capable"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "orders", force: :cascade do |t|
-    t.integer "client_id"
-    t.integer "payment_method"
-    t.integer "ship_status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

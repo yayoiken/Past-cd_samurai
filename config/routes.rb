@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
-  devise_for :admins
   root 'home#top'
-  namespace :admin do
+  devise_for :clients
+  resources :clients do
+    get 'withdrawal', on: :member
+    get 'ordered', on: :collection
+  end
+  
+
+  devise_for :admins
+  namespace :admins do
    resources :products # => /admin/products etc
   end
 

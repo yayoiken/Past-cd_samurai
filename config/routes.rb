@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  resources :products
   devise_for :admins
   root 'home#top'
-  namespace :admin do
+  namespace :admins do
    resources :products # => /admin/products etc
   end
 

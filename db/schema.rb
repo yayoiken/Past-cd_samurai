@@ -35,6 +35,14 @@ ActiveRecord::Schema.define(version: 2019_06_22_035527) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
+  create_table "carts", force: :cascade do |t|
+    t.integer "client_id"
+    t.integer "product_id"
+    t.integer "quantity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "clients", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -54,6 +62,30 @@ ActiveRecord::Schema.define(version: 2019_06_22_035527) do
     t.index ["reset_password_token"], name: "index_clients_on_reset_password_token", unique: true
   end
 
+  create_table "genres", force: :cascade do |t|
+    t.string "genre_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "product_disc_songs", force: :cascade do |t|
+    t.integer "disc_id"
+    t.string "song_name"
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "product_discs", force: :cascade do |t|
+    t.integer "product_id"
+    t.string "disc_title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.integer "genre_id"
+    t.integer "admin_id"
   create_table "order_products", force: :cascade do |t|
     t.integer "genre_id"
     t.integer "order_id"
@@ -62,6 +94,8 @@ ActiveRecord::Schema.define(version: 2019_06_22_035527) do
     t.string "label_name"
     t.string "product_image_id"
     t.integer "price"
+    t.integer "stock"
+    t.boolean "buy_capable"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

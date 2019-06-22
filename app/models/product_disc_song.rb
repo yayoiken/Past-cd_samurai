@@ -1,0 +1,2 @@
+class ProductDiscSong < ApplicationRecord
+end

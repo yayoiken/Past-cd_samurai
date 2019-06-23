@@ -4808,3 +4808,2061 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 221ms (Views: 185.1ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/clients/sign_in" for 10.0.2.2 at 2019-06-23 02:38:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#new as HTML
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/shared/_links.html.erb (1.4ms)
+  Rendered clients/sessions/new.html.erb within layouts/application (108.8ms)
+Completed 200 OK in 1348ms (Views: 1310.1ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/clients/sign_up" for 10.0.2.2 at 2019-06-23 02:38:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering clients/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.6.2/app/views/devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered clients/shared/_links.html.erb (1.2ms)
+  Rendered clients/registrations/new.html.erb within layouts/application (47.8ms)
+Completed 200 OK in 340ms (Views: 338.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/clients" for 10.0.2.2 at 2019-06-23 02:38:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"USvGUA27Z+uOLIKf5eAEUCuqSiZretyIO60KhrR5asziGRGBoRYtFR7/Z6I6Ss1LGU9e/yXDB9irB27hXzX08Q==", "client"=>{"email"=>"a@a", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mClient Exists (4.0ms)[0m  [1m[34mSELECT  1 AS one FROM "clients" WHERE "clients"."email" = ? LIMIT ?[0m  [["email", "a@a"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mClient Create (13.0ms)[0m  [1m[32mINSERT INTO "clients" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "a@a"], ["encrypted_password", "$2a$11$iztrx0ichGtBswcW9vFb9uREzFWEAdOJzZL1L6BrRUHDduwBKuei."], ["created_at", "2019-06-23 02:38:49.268114"], ["updated_at", "2019-06-23 02:38:49.268114"]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 369ms (ActiveRecord: 23.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 02:38:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 325ms (Views: 297.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 02:41:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 284ms (Views: 254.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 10.0.2.2 at 2019-06-23 02:41:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 298ms (Views: 249.7ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/products/2" for 10.0.2.2 at 2019-06-23 02:41:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (2.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:7
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 338ms (Views: 296.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/products" for 10.0.2.2 at 2019-06-23 02:41:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 247ms (Views: 205.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/products" for 10.0.2.2 at 2019-06-23 02:42:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 330ms (Views: 285.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 02:42:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 280ms (Views: 234.7ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/clients/sign_out" for 10.0.2.2 at 2019-06-23 02:42:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eeOxfgTZ+GN9OeqXCOKB4HImZYxpwfHLQJ3SJZkXCIsAWSSH8N1q6MNjnzNhi6wB9kb+krc61AhqHT2gdbsLaw=="}
+  [1m[36mClient Load (2.7ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 58ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 02:42:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 293ms (Views: 260.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 02:44:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 425ms (Views: 380.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_in" for 10.0.2.2 at 2019-06-23 02:44:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/shared/_links.html.erb (1.5ms)
+  Rendered clients/sessions/new.html.erb within layouts/application (45.2ms)
+Completed 200 OK in 408ms (Views: 405.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/clients/sign_in" for 10.0.2.2 at 2019-06-23 02:44:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5/3FXH6NtLrAUe6g9gaHRDZjfGFUJLgI+1x2XTsFbHITNkZ4aZS0N1IXwKA/IaiH9Hhz4aDyisMvuTrbrvlOug==", "client"=>{"email"=>"a@a", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mClient Load (2.6ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."email" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["email", "a@a"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 288ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 02:44:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 318ms (Views: 292.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 02:45:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (192.9ms)
+Completed 500 Internal Server Error in 331ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `user_signed_in?' for #<#<Class:0x00007f59fc1aefe8>:0x00007f5a000d3700>):
+    14: 
+    15: <%= link_to "商品一覧へ", products_path %>
+    16: 
+    17: <% if user_signed_in? %>
+    18: 
+    19: 	<%= link_to('ログアウト', destroy_client_session_path, :method => :delete) %>
+    20: <% else %>
+  
+app/views/home/top.html.erb:17:in `_app_views_home_top_html_erb__2322579800050581603_70012262349240'
+Started GET "/" for 10.0.2.2 at 2019-06-23 02:48:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 314ms (Views: 279.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 02:50:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (212.5ms)
+Completed 500 Internal Server Error in 329ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `user_signed_in?' for #<#<Class:0x00007f59fc1aefe8>:0x00007f5a18a2fe58>):
+    14: 
+    15: <%= link_to "商品一覧へ", products_path %>
+    16: 
+    17: <% if user_signed_in? %>
+    18: 
+    19: 	<%= link_to('ログアウト', destroy_client_session_path, :method => :delete) %>
+    20: <% else %>
+  
+app/views/home/top.html.erb:17:in `_app_views_home_top_html_erb__2322579800050581603_70012468571420'
+Started GET "/" for 10.0.2.2 at 2019-06-23 02:52:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 385ms (Views: 350.4ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/clients/sign_out" for 10.0.2.2 at 2019-06-23 02:52:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zdXbBlQ2f9V4vIGS8y0J/a8kizDxqg/WzfdU4589/YK13wbn+KZfSwxpyiIwYMm5nyy4ccbMblrRl5oyg36EiQ=="}
+  [1m[36mClient Load (2.0ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 16ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 02:52:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 252ms (Views: 227.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_in" for 10.0.2.2 at 2019-06-23 02:52:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/shared/_links.html.erb (1.2ms)
+  Rendered clients/sessions/new.html.erb within layouts/application (37.7ms)
+Completed 200 OK in 231ms (Views: 230.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/clients/sign_in" for 10.0.2.2 at 2019-06-23 02:52:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DymgvReZ0Tjhye8yeYqWimsXoi0y22ssoP1e/gWR0GLJUMae93TdhSUaoWY8iT0FCmmEEpgujOHDzjnB8X83yQ==", "client"=>{"email"=>"a@a", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mClient Load (2.4ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."email" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["email", "a@a"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 222ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 02:52:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 299ms (Views: 265.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 10.0.2.2 at 2019-06-23 02:53:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 276ms (Views: 244.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/products/2" for 10.0.2.2 at 2019-06-23 02:53:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (2.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:7
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 232ms (Views: 197.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/products" for 10.0.2.2 at 2019-06-23 02:53:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 231ms (Views: 192.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/products" for 10.0.2.2 at 2019-06-23 02:53:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 244ms (Views: 206.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 02:53:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 239ms (Views: 207.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 10.0.2.2 at 2019-06-23 02:53:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 275ms (Views: 245.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/products/2" for 10.0.2.2 at 2019-06-23 02:53:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:7
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 311ms (Views: 257.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/products" for 10.0.2.2 at 2019-06-23 02:53:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 217ms (Views: 182.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 02:53:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 328ms (Views: 286.9ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/clients/sign_out" for 10.0.2.2 at 2019-06-23 02:54:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QN8tuO9QjyAO3iolPXgC8xjdVZlTU75lz727Swfm5Jt/DXNbcJ6H+IWmejItVwgA1fRYMk2dIKeLiRD7Os2r/w=="}
+  [1m[36mClient Load (3.5ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 19ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 02:54:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 320ms (Views: 289.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_in" for 10.0.2.2 at 2019-06-23 02:54:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/shared/_links.html.erb (0.9ms)
+  Rendered clients/sessions/new.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 276ms (Views: 275.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/clients/sign_in" for 10.0.2.2 at 2019-06-23 02:54:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3zT5JEGAaNmjbj82c8v5mOpzrAg4MVCTsN9I7v/cZ4+Uk9FmPdtO8PRJ1YLPuOB9vh6IqT1lvAezA9VOk4GNwA==", "client"=>{"email"=>"a@a", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mClient Load (1.9ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."email" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["email", "a@a"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 242ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 02:54:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 300ms (Views: 263.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_in" for 10.0.2.2 at 2019-06-23 02:58:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mClient Load (3.4ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 10ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 02:58:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 278ms (Views: 250.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/1" for 10.0.2.2 at 2019-06-23 02:59:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `authenticate_user!' for #<ClientsController:0x00007f5a0020cf18>):
+  
+activesupport (5.2.3) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.3) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.3) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.3) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/clients/1" for 10.0.2.2 at 2019-06-23 02:59:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (2.9ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mClient Load (2.3ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/clients_controller.rb:5
+  Rendering clients/show.html.erb within layouts/application
+  Rendered clients/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 1341ms (Views: 1225.3ms | ActiveRecord: 14.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:01:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 165ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/vagrant/cd_samurai/app/views/home/top.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+...o "マイページ" client_path(@client) );
+...                    ^~~~~~~~~~~):
+  
+app/views/home/top.html.erb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:02:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (27.0ms)
+Completed 500 Internal Server Error in 164ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"clients", :id=>nil}, missing required keys: [:id]):
+    18: 
+    19:     <%= link_to "ログイン", new_client_session_path %>
+    20: 
+    21:     <%= link_to "マイページ", client_path(@client) %>
+  
+app/views/home/top.html.erb:21:in `_app_views_home_top_html_erb__2815159969973144284_47161330401040'
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:02:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 1294ms (Views: 1252.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_in" for 10.0.2.2 at 2019-06-23 03:02:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mClient Load (2.7ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 70ms (ActiveRecord: 13.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:02:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 227ms (Views: 196.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:02:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (19.8ms)
+Completed 500 Internal Server Error in 134ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"clients", :id=>nil}, missing required keys: [:id]):
+    18: 
+    19:     <%= link_to "ログイン", new_client_session_path %>
+    20: 
+    21:     <%= link_to "マイページ", client_path(@client) %>
+  
+app/views/home/top.html.erb:21:in `_app_views_home_top_html_erb__2815159969973144284_70130543147420'
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:03:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (2.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 929ms (Views: 857.0ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/clients/1" for 10.0.2.2 at 2019-06-23 03:03:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (2.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mClient Load (2.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/clients_controller.rb:5
+  Rendering clients/show.html.erb within layouts/application
+  Rendered clients/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 245ms (Views: 202.8ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/clients/1" for 10.0.2.2 at 2019-06-23 03:03:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (1.6ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mClient Load (2.9ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/clients_controller.rb:5
+  Rendering clients/show.html.erb within layouts/application
+  Rendered clients/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 339ms (Views: 297.4ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:05:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (1.8ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 304ms (Views: 260.6ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/clients/sign_out" for 10.0.2.2 at 2019-06-23 03:06:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LHhwEZ5G4XXQXvtmh8gdpKPA4tX94FYoIYB8OpzAstjaWDrfoIfrx2uB4/BMp6TKI1VcQfWzAaxAACWqGMNjvQ=="}
+  [1m[36mClient Load (2.6ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 52ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:06:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 340ms (Views: 305.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_in" for 10.0.2.2 at 2019-06-23 03:06:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/shared/_links.html.erb (1.4ms)
+  Rendered clients/sessions/new.html.erb within layouts/application (50.3ms)
+Completed 200 OK in 300ms (Views: 297.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/clients/sign_in" for 10.0.2.2 at 2019-06-23 03:06:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tyYpVWYwNl/OmGIUhN3JMlJCnG5ZKo7K/+l8OsqepX4a0yfNPdfDO264F3JfX9TN77U22CXCP6P1rrQ4uX5Lng==", "client"=>{"email"=>"a@a", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mClient Load (2.8ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."email" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["email", "a@a"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 279ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:06:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (2.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 331ms (Views: 292.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/clients/1" for 10.0.2.2 at 2019-06-23 03:06:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mClient Load (1.8ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mClient Load (1.7ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/clients_controller.rb:5
+  Rendering clients/show.html.erb within layouts/application
+  Rendered clients/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 214ms (Views: 175.3ms | ActiveRecord: 3.6ms)
+
+
+Started DELETE "/clients/sign_out" for 10.0.2.2 at 2019-06-23 03:06:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2NwqgTjNZgYI/Chab5QQEl0CPWdA+6eH/0YBKocPOYUI+aT09hhxtShOTPFE6s0KVCqdDP/wsEJrwmLTACz2lw=="}
+  [1m[36mClient Load (2.7ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:06:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 369ms (Views: 328.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_in" for 10.0.2.2 at 2019-06-23 03:06:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/shared/_links.html.erb (1.0ms)
+  Rendered clients/sessions/new.html.erb within layouts/application (45.9ms)
+Completed 200 OK in 356ms (Views: 354.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/clients/sign_in" for 10.0.2.2 at 2019-06-23 03:06:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tYXXLjhPxL/40+ueBBNN/wTx/EWP+1ubkBPLJ6Bk27P9R3w4uGjU2whiggvSjDlqd7RW9OtgrXbTlNhVUqWSDA==", "client"=>{"email"=>"a@a", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mClient Load (2.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."email" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["email", "a@a"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 163ms (ActiveRecord: 2.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tYXXLjhPxL/40+ueBBNN/wTx/EWP+1ubkBPLJ6Bk27P9R3w4uGjU2whiggvSjDlqd7RW9OtgrXbTlNhVUqWSDA==", "client"=>{"email"=>"a@a", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/shared/_links.html.erb (1.4ms)
+  Rendered clients/sessions/new.html.erb within layouts/application (38.3ms)
+Completed 200 OK in 509ms (Views: 324.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/clients/sign_in" for 10.0.2.2 at 2019-06-23 03:06:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rg53fy4hf2HcRb9os2l3n4s3otPlnJFb7I4+5lvEDiBxVSrBZZXmra+fox+vN53gbTOc+76r9+X9LQlyBTslww==", "client"=>{"email"=>"a@a", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mClient Load (2.6ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."email" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["email", "a@a"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 231ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:06:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (1.9ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 254ms (Views: 219.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/products" for 10.0.2.2 at 2019-06-23 03:06:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 315ms (Views: 267.1ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/products/2" for 10.0.2.2 at 2019-06-23 03:06:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:7
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 255ms (Views: 226.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/products" for 10.0.2.2 at 2019-06-23 03:06:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 224ms (Views: 182.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:07:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (3.4ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 222ms (Views: 188.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/products" for 10.0.2.2 at 2019-06-23 03:07:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 237ms (Views: 204.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:07:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (2.4ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 309ms (Views: 273.0ms | ActiveRecord: 2.4ms)
+
+
+Started DELETE "/clients/sign_out" for 10.0.2.2 at 2019-06-23 03:11:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"AF3UVNb+k1Ap9FWdMLAfO5zX47ACAl+OjUd1DkP3IW+ueJXp3EAsRXjqHkCLy2eUTWiLcfk9QZiSNdx7EFNnNg=="}
+  [1m[36mClient Load (3.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:11:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 341ms (Views: 311.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_in" for 10.0.2.2 at 2019-06-23 03:11:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/shared/_links.html.erb (1.1ms)
+  Rendered clients/sessions/new.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 275ms (Views: 273.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_up" for 10.0.2.2 at 2019-06-23 03:11:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering clients/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.6.2/app/views/devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered clients/shared/_links.html.erb (1.1ms)
+  Rendered clients/registrations/new.html.erb within layouts/application (44.1ms)
+Completed 200 OK in 267ms (Views: 265.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_up" for 10.0.2.2 at 2019-06-23 03:12:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering clients/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.6.2/app/views/devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered clients/shared/_links.html.erb (1.0ms)
+  Rendered clients/registrations/new.html.erb within layouts/application (59.7ms)
+Completed 200 OK in 384ms (Views: 382.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_up" for 10.0.2.2 at 2019-06-23 03:12:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering clients/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.6.2/app/views/devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered clients/shared/_links.html.erb (1.0ms)
+  Rendered clients/registrations/new.html.erb within layouts/application (89.7ms)
+Completed 200 OK in 428ms (Views: 426.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_in" for 10.0.2.2 at 2019-06-23 03:13:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/shared/_links.html.erb (1.1ms)
+  Rendered clients/sessions/new.html.erb within layouts/application (37.3ms)
+Completed 200 OK in 350ms (Views: 346.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_in" for 10.0.2.2 at 2019-06-23 03:14:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/sessions/new.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 156ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/vagrant/cd_samurai/app/views/clients/sessions/new.html.erb:5: syntax error, unexpected ':', expecting ')'
+...label "メールアドレス" :email );@output_buffer.safe_a...
+...                              ^):
+  
+app/views/clients/sessions/new.html.erb:5: syntax error, unexpected ':', expecting ')'
+Started GET "/clients/sign_in" for 10.0.2.2 at 2019-06-23 03:14:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/shared/_links.html.erb (1.1ms)
+  Rendered clients/sessions/new.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 395ms (Views: 393.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_in" for 10.0.2.2 at 2019-06-23 03:14:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/shared/_links.html.erb (2.1ms)
+  Rendered clients/sessions/new.html.erb within layouts/application (31.6ms)
+Completed 200 OK in 336ms (Views: 334.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_in" for 10.0.2.2 at 2019-06-23 03:15:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/shared/_links.html.erb (1.4ms)
+  Rendered clients/sessions/new.html.erb within layouts/application (34.7ms)
+Completed 200 OK in 320ms (Views: 318.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_in" for 10.0.2.2 at 2019-06-23 03:16:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/shared/_links.html.erb (1.1ms)
+  Rendered clients/sessions/new.html.erb within layouts/application (43.7ms)
+Completed 200 OK in 449ms (Views: 446.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_up" for 10.0.2.2 at 2019-06-23 03:16:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering clients/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.6.2/app/views/devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered clients/shared/_links.html.erb (0.9ms)
+  Rendered clients/registrations/new.html.erb within layouts/application (52.6ms)
+Completed 200 OK in 309ms (Views: 307.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_up" for 10.0.2.2 at 2019-06-23 03:16:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering clients/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.6.2/app/views/devise/shared/_error_messages.html.erb (1.5ms)
+  Rendered clients/shared/_links.html.erb (1.2ms)
+  Rendered clients/registrations/new.html.erb within layouts/application (47.8ms)
+Completed 200 OK in 310ms (Views: 308.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_up" for 10.0.2.2 at 2019-06-23 03:18:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering clients/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.6.2/app/views/devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered clients/shared/_links.html.erb (1.8ms)
+  Rendered clients/registrations/new.html.erb within layouts/application (57.9ms)
+Completed 200 OK in 435ms (Views: 433.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_up" for 10.0.2.2 at 2019-06-23 03:19:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering clients/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.6.2/app/views/devise/shared/_error_messages.html.erb (0.7ms)
+  Rendered clients/shared/_links.html.erb (1.0ms)
+  Rendered clients/registrations/new.html.erb within layouts/application (56.0ms)
+Completed 200 OK in 368ms (Views: 367.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_in" for 10.0.2.2 at 2019-06-23 03:19:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/shared/_links.html.erb (1.0ms)
+  Rendered clients/sessions/new.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 244ms (Views: 241.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_in" for 10.0.2.2 at 2019-06-23 03:19:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/shared/_links.html.erb (1.0ms)
+  Rendered clients/sessions/new.html.erb within layouts/application (42.6ms)
+Completed 200 OK in 387ms (Views: 384.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_in" for 10.0.2.2 at 2019-06-23 03:20:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/shared/_links.html.erb (1.8ms)
+  Rendered clients/sessions/new.html.erb within layouts/application (53.6ms)
+Completed 200 OK in 457ms (Views: 454.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_in" for 10.0.2.2 at 2019-06-23 03:20:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/shared/_links.html.erb (1.1ms)
+  Rendered clients/sessions/new.html.erb within layouts/application (67.7ms)
+Completed 200 OK in 463ms (Views: 460.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_up" for 10.0.2.2 at 2019-06-23 03:20:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering clients/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.6.2/app/views/devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered clients/shared/_links.html.erb (1.1ms)
+  Rendered clients/registrations/new.html.erb within layouts/application (41.7ms)
+Completed 200 OK in 270ms (Views: 268.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_up" for 10.0.2.2 at 2019-06-23 03:22:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering clients/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.6.2/app/views/devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered clients/shared/_links.html.erb (1.1ms)
+  Rendered clients/registrations/new.html.erb within layouts/application (72.3ms)
+Completed 200 OK in 410ms (Views: 408.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_up" for 10.0.2.2 at 2019-06-23 03:22:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering clients/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.6.2/app/views/devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered clients/shared/_links.html.erb (1.0ms)
+  Rendered clients/registrations/new.html.erb within layouts/application (50.8ms)
+Completed 200 OK in 373ms (Views: 370.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_in" for 10.0.2.2 at 2019-06-23 03:23:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/shared/_links.html.erb (1.1ms)
+  Rendered clients/sessions/new.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 259ms (Views: 257.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_up" for 10.0.2.2 at 2019-06-23 03:23:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering clients/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.6.2/app/views/devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered clients/shared/_links.html.erb (2.3ms)
+  Rendered clients/registrations/new.html.erb within layouts/application (66.9ms)
+Completed 200 OK in 416ms (Views: 414.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_in" for 10.0.2.2 at 2019-06-23 03:23:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/shared/_links.html.erb (1.2ms)
+  Rendered clients/sessions/new.html.erb within layouts/application (40.7ms)
+Completed 200 OK in 367ms (Views: 363.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_up" for 10.0.2.2 at 2019-06-23 03:23:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering clients/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.6.2/app/views/devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered clients/shared/_links.html.erb (1.1ms)
+  Rendered clients/registrations/new.html.erb within layouts/application (51.8ms)
+Completed 200 OK in 352ms (Views: 349.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_up" for 10.0.2.2 at 2019-06-23 03:24:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering clients/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.6.2/app/views/devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered clients/shared/_links.html.erb (1.1ms)
+  Rendered clients/registrations/new.html.erb within layouts/application (57.7ms)
+Completed 200 OK in 389ms (Views: 387.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_in" for 10.0.2.2 at 2019-06-23 03:24:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/shared/_links.html.erb (1.1ms)
+  Rendered clients/sessions/new.html.erb within layouts/application (34.6ms)
+Completed 200 OK in 334ms (Views: 332.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_in" for 10.0.2.2 at 2019-06-23 03:26:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/shared/_links.html.erb (1.2ms)
+  Rendered clients/sessions/new.html.erb within layouts/application (36.9ms)
+Completed 200 OK in 297ms (Views: 295.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/password/new" for 10.0.2.2 at 2019-06-23 03:26:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::PasswordsController#new as HTML
+  Rendering clients/passwords/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.6.2/app/views/devise/shared/_error_messages.html.erb (0.9ms)
+  Rendered clients/shared/_links.html.erb (1.0ms)
+  Rendered clients/passwords/new.html.erb within layouts/application (77.6ms)
+Completed 200 OK in 328ms (Views: 295.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/password/new" for 10.0.2.2 at 2019-06-23 03:28:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::PasswordsController#new as HTML
+  Rendering clients/passwords/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.6.2/app/views/devise/shared/_error_messages.html.erb (0.7ms)
+  Rendered clients/shared/_links.html.erb (1.2ms)
+  Rendered clients/passwords/new.html.erb within layouts/application (71.6ms)
+Completed 200 OK in 460ms (Views: 406.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/password/new" for 10.0.2.2 at 2019-06-23 03:28:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::PasswordsController#new as HTML
+  Rendering clients/passwords/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.6.2/app/views/devise/shared/_error_messages.html.erb (0.7ms)
+  Rendered clients/shared/_links.html.erb (1.1ms)
+  Rendered clients/passwords/new.html.erb within layouts/application (58.4ms)
+Completed 200 OK in 322ms (Views: 293.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/password/new" for 10.0.2.2 at 2019-06-23 03:30:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::PasswordsController#new as HTML
+  Rendering clients/passwords/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.6.2/app/views/devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered clients/shared/_links.html.erb (3.5ms)
+  Rendered clients/passwords/new.html.erb within layouts/application (105.0ms)
+Completed 200 OK in 1265ms (Views: 1185.0ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/clients/sign_in" for 10.0.2.2 at 2019-06-23 03:30:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/shared/_links.html.erb (1.2ms)
+  Rendered clients/sessions/new.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 260ms (Views: 258.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/clients/sign_in" for 10.0.2.2 at 2019-06-23 03:30:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l73X3l/YJBK/XROXmNXMXQhUlPCuYfIXImNfPpHT+5OnE9PB2aN0b0/T8ASTteaY39wBJDrcXw6GgRCXqmP4LA==", "client"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l73X3l/YJBK/XROXmNXMXQhUlPCuYfIXImNfPpHT+5OnE9PB2aN0b0/T8ASTteaY39wBJDrcXw6GgRCXqmP4LA==", "client"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/shared/_links.html.erb (2.3ms)
+  Rendered clients/sessions/new.html.erb within layouts/application (43.0ms)
+Completed 200 OK in 409ms (Views: 407.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/clients/sign_in" for 10.0.2.2 at 2019-06-23 03:32:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x6uzDUaMnVVtoMgvznxpjXfRNfp22iKHNzTCqmSCf4I52AbX5e18ytwPAsb2pXvQQ3r+GDyI0jBqFGD/pXvZNg==", "client"=>{"email"=>"a@a", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x6uzDUaMnVVtoMgvznxpjXfRNfp22iKHNzTCqmSCf4I52AbX5e18ytwPAsb2pXvQQ3r+GDyI0jBqFGD/pXvZNg==", "client"=>{"email"=>"a@a", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/shared/_links.html.erb (1.2ms)
+  Rendered clients/sessions/new.html.erb within layouts/application (41.7ms)
+Completed 200 OK in 405ms (Views: 404.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/clients/sign_in" for 10.0.2.2 at 2019-06-23 03:32:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6o5sTAYeTl8mJ+GYxv7/dpCoxXbM6yY0pF8RMjIMIN8U/dmWpX+vwJeIK3H+J+0rpAMOlIa51oP5f7Nn8/WGaw==", "client"=>{"email"=>"a@a", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mClient Load (3.6ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."email" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["email", "a@a"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 223ms (ActiveRecord: 3.6ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6o5sTAYeTl8mJ+GYxv7/dpCoxXbM6yY0pF8RMjIMIN8U/dmWpX+vwJeIK3H+J+0rpAMOlIa51oP5f7Nn8/WGaw==", "client"=>{"email"=>"a@a", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/shared/_links.html.erb (1.4ms)
+  Rendered clients/sessions/new.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 446ms (Views: 294.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/clients/sign_in" for 10.0.2.2 at 2019-06-23 03:32:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F2StUcfk9NP9s/UPYNEEmeN8LLtjh7jhdfMUhO1nnYTpFxiLZIUVTEwcP+ZYCBbE19fnWSnVSFYo07bRLJ47MA==", "client"=>{"email"=>"a@a", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mClient Load (2.6ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."email" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["email", "a@a"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 157ms (ActiveRecord: 2.6ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F2StUcfk9NP9s/UPYNEEmeN8LLtjh7jhdfMUhO1nnYTpFxiLZIUVTEwcP+ZYCBbE19fnWSnVSFYo07bRLJ47MA==", "client"=>{"email"=>"a@a", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/shared/_links.html.erb (1.2ms)
+  Rendered clients/sessions/new.html.erb within layouts/application (40.8ms)
+Completed 200 OK in 527ms (Views: 361.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/password/new" for 10.0.2.2 at 2019-06-23 03:32:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::PasswordsController#new as HTML
+  Rendering clients/passwords/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.6.2/app/views/devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered clients/shared/_links.html.erb (1.1ms)
+  Rendered clients/passwords/new.html.erb within layouts/application (44.9ms)
+Completed 200 OK in 338ms (Views: 303.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients/sign_in" for 10.0.2.2 at 2019-06-23 03:33:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/shared/_links.html.erb (1.2ms)
+  Rendered clients/sessions/new.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 382ms (Views: 376.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/clients/sign_in" for 10.0.2.2 at 2019-06-23 03:33:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/440p3b+2HJJuHIzH6WQQWrLf6HAd6ENdtRkaNBR0FjPIDC48IWID7k2kaAUxbqEvUPqdVTKDBTSNivB6+HT5w==", "client"=>{"email"=>"a@a", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mClient Load (2.0ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."email" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["email", "a@a"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 243ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:33:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (2.3ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 247ms (Views: 216.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:35:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (2.4ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 372ms (Views: 336.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/products" for 10.0.2.2 at 2019-06-23 03:36:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (3.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 262ms (Views: 211.3ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/products/2" for 10.0.2.2 at 2019-06-23 03:36:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (2.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:7
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 226ms (Views: 193.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/products" for 10.0.2.2 at 2019-06-23 03:36:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 271ms (Views: 226.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admins/products" for 10.0.2.2 at 2019-06-23 03:36:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::ProductsController#index as HTML
+  Rendering admins/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admins/products/index.html.erb:3
+  Rendered admins/products/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 388ms (Views: 353.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/admins/products/new" for 10.0.2.2 at 2019-06-23 03:36:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::ProductsController#new as HTML
+  Rendering admins/products/new.html.erb within layouts/application
+  Rendered admins/products/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 220ms (Views: 193.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/products" for 10.0.2.2 at 2019-06-23 03:37:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gHHRSIC+JbLOwJbqPgjcWERSZt5PrwUeerF6HGkdP9dDQOM2fIdIMPw3PM97mtpNbnuVjDBPd2Yn82uO2yIggA==", "product"=>{"cd_title"=>"U.S.A"}, "commit"=>"商品を追加"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admins/products_controller.rb:16
+  [1m[36mProduct Create (11.7ms)[0m  [1m[32mINSERT INTO "products" ("cd_title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cd_title", "U.S.A"], ["created_at", "2019-06-23 03:37:02.869106"], ["updated_at", "2019-06-23 03:37:02.869106"]]
+  ↳ app/controllers/admins/products_controller.rb:16
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/admins/products_controller.rb:16
+Redirected to http://localhost:3000/admins/products/5
+Completed 302 Found in 38ms (ActiveRecord: 16.9ms)
+
+
+Started GET "/admins/products/5" for 10.0.2.2 at 2019-06-23 03:37:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::ProductsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProduct Load (3.7ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/admins/products_controller.rb:7
+  Rendering admins/products/show.html.erb within layouts/application
+  Rendered admins/products/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 387ms (Views: 351.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/admins/products" for 10.0.2.2 at 2019-06-23 03:37:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::ProductsController#index as HTML
+  Rendering admins/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admins/products/index.html.erb:3
+  Rendered admins/products/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 229ms (Views: 198.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/products" for 10.0.2.2 at 2019-06-23 03:37:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 367ms (Views: 330.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/admins/products" for 10.0.2.2 at 2019-06-23 03:37:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::ProductsController#index as HTML
+  Rendering admins/products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/admins/products/index.html.erb:3
+  Rendered admins/products/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 409ms (Views: 355.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/products" for 10.0.2.2 at 2019-06-23 03:38:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 308ms (Views: 271.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:38:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (1.8ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 210ms (Views: 178.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/products" for 10.0.2.2 at 2019-06-23 03:39:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 274ms (Views: 228.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/products/2" for 10.0.2.2 at 2019-06-23 03:39:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (6.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:7
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 229ms (Views: 182.5ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/products" for 10.0.2.2 at 2019-06-23 03:39:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 232ms (Views: 184.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:39:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (1.9ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 244ms (Views: 204.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:41:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (2.5ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 348ms (Views: 315.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/cd_samurai.jpg" for 10.0.2.2 at 2019-06-23 03:41:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/cd_samurai.jpg"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:42:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (2.5ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 357ms (Views: 317.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/images/cd_samurai.jpg" for 10.0.2.2 at 2019-06-23 03:42:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/images/cd_samurai.jpg"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:42:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (1.0ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 333ms (Views: 293.0ms | ActiveRecord: 1.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/images/cd_samurai.jpg"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.3) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.3) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:44:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (2.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 1651ms (Views: 1573.5ms | ActiveRecord: 11.1ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/images/cd_samurai.jpg"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.3) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.3) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:44:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (2.0ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 342ms (Views: 310.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/images/cd_samurai.jpg" for 10.0.2.2 at 2019-06-23 03:44:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/images/cd_samurai.jpg"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:46:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (3.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 392ms (Views: 347.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:48:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (2.6ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 341ms (Views: 293.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:50:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (5.3ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 431ms (Views: 382.0ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:50:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (2.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 483ms (Views: 432.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:55:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (5.3ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 385ms (ActiveRecord: 5.3ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...ath("cd_samurai": expected ")", was ".jpg") %>")"):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/home.scss:6
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3638499357715372844_70136261289080'
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:56:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (1.4ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 367ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "	height": expected ";", was ": 800px;"):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/home.scss:7
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3638499357715372844_70136250886160'
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:57:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (2.7ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 370ms (ActiveRecord: 2.7ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "	background-size": expected ";", was ": cover;"):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/home.scss:7
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3638499357715372844_47461678177820'
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:57:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (2.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 596ms (Views: 554.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:57:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (2.9ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 453ms (Views: 393.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 03:59:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (2.5ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 347ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "	size": expected ";", was ": cover;"):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/home.scss:7
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3638499357715372844_70136260940040'
+Started GET "/" for 10.0.2.2 at 2019-06-23 04:00:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (3.4ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 388ms (ActiveRecord: 3.4ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "	background-size": expected ";", was ": {"):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/home.scss:7
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3638499357715372844_70136259461380'
+Started GET "/" for 10.0.2.2 at 2019-06-23 04:00:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (2.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 390ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "	background-size": expected ";", was ": cover"):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/home.scss:7
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3638499357715372844_70136254973400'
+Started GET "/" for 10.0.2.2 at 2019-06-23 04:01:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (2.0ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 473ms (Views: 438.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 04:01:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (1.8ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 531ms (Views: 475.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 04:01:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (3.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 309ms (Views: 272.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 04:02:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (1.4ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 440ms (Views: 398.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 04:02:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (2.5ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 626ms (Views: 585.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 04:04:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (2.4ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 641ms (Views: 595.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 04:04:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (2.5ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 588ms (Views: 555.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 04:05:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (2.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 489ms (Views: 446.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 04:05:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (2.5ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 327ms (Views: 290.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 04:05:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (2.0ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 590ms (Views: 555.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 04:05:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (1.5ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 264ms (Views: 234.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 04:06:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (1.8ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 671ms (Views: 631.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 04:06:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (2.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 285ms (Views: 248.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 04:07:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (4.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 681ms (Views: 639.3ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 04:08:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (2.3ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 445ms (Views: 405.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 04:08:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (2.6ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 635ms (Views: 592.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 04:09:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (2.8ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 607ms (Views: 558.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 04:10:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (1.9ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 528ms (Views: 488.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 04:13:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (3.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 678ms (Views: 633.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-06-23 04:14:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  [1m[36mClient Load (2.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? ORDER BY "clients"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 481ms (Views: 442.7ms | ActiveRecord: 2.2ms)
+
+

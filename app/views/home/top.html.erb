@@ -1,4 +1,16 @@
+<% if client_signed_in? %>
+
+    <%= link_to('ログアウト', destroy_client_session_path, :method => :delete) %>
+    <%= link_to "マイページ", client_path(@client) %>
+
+<% else %>
+    <%= link_to "ログイン/会員登録", new_client_session_path %>
+
+<% end %>
+
 <h1> Home画面</h1>
+<div class="main-container">
+
 
 <h1>ようこそ！CD侍へ！</h1><br/>
 
@@ -11,4 +23,9 @@
 	CD侍では多数のCDを取り扱っております。<br/>
 	是非こちらであなただけの最高の一枚と出会ってください。
 </p>
+
+</div>
+
+
+<%= link_to "商品一覧へ", products_path %>
 

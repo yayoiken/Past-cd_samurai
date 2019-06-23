@@ -63,3 +63,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 
 gem 'i18n'
+
+gem 'acts_as_list'
+gem 'bootstrap-sass'
+gem 'cocoon'
+gem 'kaminari'
+gem 'ransack'
+gem 'rspec'
+gem 'enum_help'

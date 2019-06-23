@@ -1,0 +1,11 @@
+<h1> 商品一覧画面（管理者側）</h1>
+
+<% @clients.each do |client| %>
+
+<%= client.name %>
+
+<%= link_to "ユーザーページ" , admins_client_path(client) %><br>
+
+<% end %>
+
+ <%= link_to('Logout', destroy_admin_session_path, :method => :delete) %>

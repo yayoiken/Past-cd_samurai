@@ -1,15 +1,22 @@
 Rails.application.routes.draw do
-  devise_for :clients
+  devise_for :clients, controllers: {
+    :regisration => 'clients/regisration',
+    :sessions => 'clients/sessions'
+}
   resources :clients do
   	get 'withdrawal', on: :member
   	get 'ordered', on: :collection
   end
   resources :products
-  devise_for :admins
-  root 'home#top'
+  devise_for :admins, controllers: {
+    :sessions => 'admins/sessions'
+}
   namespace :admins do
-   resources :products # => /admin/products etc
+   get '/' => 'products#index'
+   resources :products
   end
+
+  root 'home#top'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

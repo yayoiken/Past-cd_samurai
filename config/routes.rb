@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'carts/index'
+  get 'carts/create'
+  get 'carts/update'
+  get 'carts/destroy'
   devise_for :clients, controllers: {
     :regisration => 'clients/regisration',
     :sessions => 'clients/sessions'

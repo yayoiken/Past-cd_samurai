@@ -7,10 +7,15 @@ Rails.application.routes.draw do
   	get 'withdrawal', on: :member
   	get 'ordered', on: :collection
   end
-  resources :products do 
+  resources :addresses, only: [:create,:new,:edit,:update,:destroy]
+
+  resources :products do
     resource :carts, only: [:create]
   end
+  resource :carts, only: [:update]
   resources :carts, only: [:index,:update,:destroy]
+  put 'carts'  => 'carts#update_all'
+
   devise_for :admins, controllers: {
     :sessions => 'admins/sessions'
 }

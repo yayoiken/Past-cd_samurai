@@ -3,6 +3,7 @@ class Client < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  has_many :carts
+  has_many :carts, dependent: :destroy
+  has_many :addresses, dependent: :destroy
 enum gender: {man:0, woman:1, custom:2}
 end

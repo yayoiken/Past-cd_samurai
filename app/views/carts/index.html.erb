@@ -1,6 +1,17 @@
-<div>aaa
-<% @carts.each do |f| %>
-<%= f.product.cd_title %>
-<% end %>
+<%= form_tag carts_path, method: :put do%>
+<% @carts.each do |cart| %>
+<%= fields_for "carts[]", cart do |fi|  %>
+<div>
+<div>
+<%= cart.product.cd_title %>
+	</div>
+
+	<%= fi.label :quantity, "数量"%>
+	<%= fi.select :quantity, [1,2,3,4,5,6,7,8,9]%>
+  <% end %>
+  <%= link_to "カートから削除", cart_path(cart), method: :delete %>
+  <% end %>
+  <%= submit_tag "購入確認画面へ" %>
+  <% end %>
 </div>
 <%= link_to "商品一覧へ" , products_path %>

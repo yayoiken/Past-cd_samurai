@@ -2,8 +2,12 @@ class ClientsController < ApplicationController
   before_action :authenticate_client!
 
   def show
+<<<<<<< HEAD
     @client = Client.find(params[:id])
     @addresses = Address.where(client_id: current_client.id)
+=======
+    @clients = Client.find(params[:id])
+>>>>>>> 1329387be89d350a00954d0f22509cbaedb191bf
   end
 
   def edit

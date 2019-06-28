@@ -1,11 +1,13 @@
 <h1> マイページ</h1>
 <div>
- <label>性別 : <%= @client.gender_i18n %></label>
+ <label>性別 : <%= @clients.gender_i18n %></label>
 </div>
 <div class="field">
  <label>名前 : <%= @client.last_name %></label><br>
  <label>メールアドレス : <%= @client.email %></label>
  <%= link_to '編集する', edit_client_path(@client)%>
+ <label>名前 : <%= @clients.last_name + @clients.first_name %></label><br>
+ <label>メールアドレス : <%= @clients.email %></label>
 </div>
 <div>
 	<% @addresses.each do |address|%>

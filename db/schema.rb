@@ -94,6 +94,8 @@ ActiveRecord::Schema.define(version: 2019_06_23_153111) do
     t.integer "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "product_disc_id"
+    t.index ["product_disc_id"], name: "index_product_disc_songs_on_product_disc_id"
   end
 
   create_table "product_discs", force: :cascade do |t|
